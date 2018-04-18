@@ -6,7 +6,7 @@ Overview
 ========
 MODIS and Landsat surface reflectance products have complementary characteristics in terms of spatial and temporal resolutions. To fully exploit these datasets, the Spatial and Temporal Adaptive Reflectance Fusion Model (STARFM) was developed by Gao et al. (2006). The STARFM approach blends the high-frequency temporal information from MODIS and the high-resolution spatial information from Landsat to generate synthetic surface reflectance products at 30m spatial resolution and daily temporal resolution. STARFM uses one or more pairs of Landsat-MODIS images collected on the same dates to predict surface reflectance at Landsat resolution on other MODIS observation dates. In order to better predict the reflectance of sub-pixel consisting of heterogeneous landscapes, an enhanced STARFM (ESTARFM) was developed by Zhu et al. (2010), which is based on the spectral unmixing theory and uses a “conversion coefficient” to help the prediction.A spatial and temporal nonlocal filter-based fusion model (STNLFFM)is presented.(2017) The proposed STNLFFM method provides a new transformation relationship between the multitemporal fineresolution reflectance images with the help of multitemporal coarse-resolution reflectance data, and then makes full use of the high degree of spatiotemporal redundancy in the remote sensing image sequence to produce the final prediction. However, the computational performance of STNLFFM has been a bottleneck for mass production.
 
-To overcome the computational barrier and support mass production of large-size images, we designed and implemented a GPU-enabled STNLFFM program based on the Compute Unified Device Architecture (CUDA), called cuSTNLFFM. By taking advantages of the large amount of concurrent computing threads of a GPU, cuSTNLFFM can greatly reduce the computing time and improve the computational performance. Experiments showed that cuESTARFM achieved a speedup of 100 using a Nvidia Tesla K40 GPU, compared with a sequential STNLFFM program running on an Intel Xeon E3-1226 CPU
+To overcome the computational barrier and support mass production of large-size images, we designed and implemented a GPU-enabled STNLFFM program based on the Compute Unified Device Architecture (CUDA), called cuSTNLFFM. By taking advantages of the large amount of concurrent computing threads of a GPU, cuSTNLFFM can greatly reduce the computing time and improve the computational performance. Experiments showed that cuSTNLFFM achieved a speedup of 100 using a Nvidia Tesla K40 GPU, compared with a sequential STNLFFM program running on an Intel Xeon E3-1226 CPU
 
 Key features of cuESTARFM:
 ========
@@ -29,7 +29,7 @@ References
 To Cite cuESTARFM in Publications
 ========
 + A paper describing cuSTNLFFM will be submitted to a scientific journal for publication soon
-+	For now, you may just cite the URL of the source codes of cuSTNLFFM (https://github.com/HPSCIL/cuESTARFM) in your publications
++	For now, you may just cite the URL of the source codes of cuSTNLFFM (https://github.com/HPSCIL/cuSTNLFFM) in your publications
 
 Compilation
 ========
