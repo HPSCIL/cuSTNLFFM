@@ -120,5 +120,5 @@ Example (# for comments):
    - For the Linux/Unix version:   
    $ ./cuSTNLFFM input.txt 
 
-+ Note: The computational performance of cuESTARFM largely depends on the GPU. The more powerful is the GPU, the better performance. 
++ Note: The computational performance of cuSTNLFFM largely depends on the GPU. The more powerful is the GPU, the better performance. 
 
