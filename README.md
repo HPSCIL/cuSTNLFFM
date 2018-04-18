@@ -8,7 +8,7 @@ MODIS and Landsat surface reflectance products have complementary characteristic
 
 To overcome the computational barrier and support mass production of large-size images, we designed and implemented a GPU-enabled STNLFFM program based on the Compute Unified Device Architecture (CUDA), called cuSTNLFFM. By taking advantages of the large amount of concurrent computing threads of a GPU, cuSTNLFFM can greatly reduce the computing time and improve the computational performance. Experiments showed that cuSTNLFFM achieved a speedup of 100 using a Nvidia Tesla K40 GPU, compared with a sequential STNLFFM program running on an Intel Xeon E3-1226 CPU
 
-Key features of cuESTARFM:
+Key features of cuSTNLFFM:
 ========
 + Supports a wide range of CUDA-enabled GPUs (https://developer.nvidia.com/cuda-gpus)  
   - Automatic setting of the numbers of threads and thread blocks according to the GPU’s available computing resources (e.g., memory, streaming multiprocessors, and warp)  
@@ -26,7 +26,7 @@ References
 + Zhu, X., Chen, J., Gao, F., Chen, X. and Masek, J. An enhanced spatial and temporal adaptive reflectance fusion model for complex heterogeneous regions, Remote Sensing of Environment, 2010, 114(11): 2610–2623.
 + Cheng Q, Liu H, Shen H, et al. A Spatial and Temporal Non-Local Filter Based Data Fusion[J]. IEEE Transactions on Geoscience & Remote Sensing, 2017, PP(99):1-13
 
-To Cite cuESTARFM in Publications
+To Cite cuSTNLFFM in Publications
 ========
 + A paper describing cuSTNLFFM will be submitted to a scientific journal for publication soon
 +	For now, you may just cite the URL of the source codes of cuSTNLFFM (https://github.com/HPSCIL/cuSTNLFFM) in your publications
