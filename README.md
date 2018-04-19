@@ -23,7 +23,7 @@ Key features of cuSTNLFFM:
 References
 ========
 + Gao, F.; Masek, J.; Schwaller, M. and Hall, F. On the Blending of the Landsat and MODIS Surface Reflectance: Predict Daily Landsat Surface Reflectance, IEEE Transactions on Geoscience and Remote Sensing. 2006, 44(8):2207-2218.   
-+ Cheng, Q.; Liu H.; Shen H.; Wu, P. and Zhang, L. A Spatial and Temporal Non-Local Filter Based Data Fusion. IEEE Transactions on Geoscience & Remote Sensing, 2017, 55(8):4476-4488
++ Cheng, Q.; Liu H.; Shen H.; Wu, P. and Zhang, L. A Spatial and Temporal Nonlocal Filter-Based Data Fusion Method. IEEE Transactions on Geoscience & Remote Sensing, 2017, 55(8):4476-4488
 
 To Cite cuSTNLFFM in Publications
 ========
