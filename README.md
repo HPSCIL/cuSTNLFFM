@@ -4,7 +4,7 @@ Version 1.0
 
 Overview
 ========
-MODIS and Landsat surface reflectance products have complementary characteristics in terms of spatial and temporal resolutions. To fully exploit these datasets, the Spatial and Temporal Adaptive Reflectance Fusion Model (STARFM) was developed by Gao et al. (2006). The STARFM approach blends the high-frequency temporal information from MODIS and the high-resolution spatial information from Landsat to generate synthetic surface reflectance products at 30m spatial resolution and daily temporal resolution. STARFM uses one or more pairs of Landsat-MODIS images collected on the same dates to predict surface reflectance at Landsat resolution on other MODIS observation dates. In order to better predict the reflectance of sub-pixel consisting of heterogeneous landscapes, an enhanced STARFM (ESTARFM) was developed by Zhu et al. (2010), which is based on the spectral unmixing theory and uses a “conversion coefficient” to help the prediction.A spatial and temporal nonlocal filter-based fusion model (STNLFFM)is presented.(2017) The proposed STNLFFM method provides a new transformation relationship between the multitemporal fineresolution reflectance images with the help of multitemporal coarse-resolution reflectance data, and then makes full use of the high degree of spatiotemporal redundancy in the remote sensing image sequence to produce the final prediction. However, the computational performance of STNLFFM has been a bottleneck for mass production.
+MODIS and Landsat surface reflectance products have complementary characteristics in terms of spatial and temporal resolutions. To fully exploit these datasets, the Spatial and Temporal Adaptive Reflectance Fusion Model (STARFM) was developed by Gao et al. (2006). The STARFM approach blends the high-frequency temporal information from MODIS and the high-resolution spatial information from Landsat to generate synthetic surface reflectance products at 30m spatial resolution and daily temporal resolution. STARFM uses one or more pairs of Landsat-MODIS images collected on the same dates to predict surface reflectance at Landsat resolution on other MODIS observation dates. Many image fusion models have been deveoiped since then. Cheng et al. (2017) deveoped a Spatial and Temporal Non-Local Filter-based Fusion Model (STNLFFM), which derives a new transformation relationship between the multi-temporal fine-resolution reflectance images with the help of multi-temporal coarse-resolution reflectance images, and makes full use of the high degree of spatiotemporal redundancy in the image sequence to produce the final prediction. However, the computational performance of STNLFFM has been a bottleneck for mass production.
 
 To overcome the computational barrier and support mass production of large-size images, we designed and implemented a GPU-enabled STNLFFM program based on the Compute Unified Device Architecture (CUDA), called cuSTNLFFM. By taking advantages of the large amount of concurrent computing threads of a GPU, cuSTNLFFM can greatly reduce the computing time and improve the computational performance. Experiments showed that cuSTNLFFM achieved a speedup of 100 using a Nvidia Tesla K40 GPU, compared with a sequential STNLFFM program running on an Intel Xeon E3-1226 CPU
 
@@ -22,9 +22,8 @@ Key features of cuSTNLFFM:
 
 References
 ========
-+ Gao, F., Masek, J., Schwaller, M., and Hall, F. On the Blending of the Landsat and MODIS Surface Reflectance: Predict Daily Landsat Surface Reflectance, IEEE Transactions on Geoscience and Remote Sensing. 2006, 44(8):2207-2218.   
-+ Zhu, X., Chen, J., Gao, F., Chen, X. and Masek, J. An enhanced spatial and temporal adaptive reflectance fusion model for complex heterogeneous regions, Remote Sensing of Environment, 2010, 114(11): 2610–2623.
-+ Cheng Q, Liu H, Shen H, et al. A Spatial and Temporal Non-Local Filter Based Data Fusion[J]. IEEE Transactions on Geoscience & Remote Sensing, 2017, PP(99):1-13
++ Gao, F.; Masek, J.; Schwaller, M. and Hall, F. On the Blending of the Landsat and MODIS Surface Reflectance: Predict Daily Landsat Surface Reflectance, IEEE Transactions on Geoscience and Remote Sensing. 2006, 44(8):2207-2218.   
++ Cheng, Q.; Liu H.; Shen H.; Wu, P. and Zhang, L. A Spatial and Temporal Non-Local Filter Based Data Fusion. IEEE Transactions on Geoscience & Remote Sensing, 2017, 55(8):4476-4488
 
 To Cite cuSTNLFFM in Publications
 ========
@@ -116,9 +115,9 @@ Example (# for comments):
 
 + The program runs as a command line. You may use the Command (i.e., cmd) in Windows, or a terminal in Linux/Unix. 
    - For the Windows version:    
-   $ cuSTNLFFM.exe input.txt 
+   $ cuSTNLFFM.exe parameters.txt 
    - For the Linux/Unix version:   
-   $ ./cuSTNLFFM input.txt 
+   $ ./cuSTNLFFM parameters.txt 
 
 + Note: The computational performance of cuSTNLFFM largely depends on the GPU. The more powerful is the GPU, the better performance. 
 
