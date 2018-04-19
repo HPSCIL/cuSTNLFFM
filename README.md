@@ -18,7 +18,7 @@ Key features of cuSTNLFFM:
   -	All above are completely transparent to users
 + Outputs any number of prediction images
 + Supports a wide range of image formats (see http://gdal.org/formats_list.html)
-+ Includes a Windows version and a Linux/Unix version
++ Supports both Windows and Linux/Unix operating systems
 
 References
 ========
