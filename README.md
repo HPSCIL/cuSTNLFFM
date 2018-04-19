@@ -47,7 +47,7 @@ Compilation
 In a Linux/Unix terminal, type in: 
   - $ cd /the-directory-of-source-codes/
   - $ nvcc -o cuSTNLFFM kernel.cu cuLayer.cpp ReadParameters.cpp fusion.cpp -lgdal  
-  Once successfully compiled, an executable file, cuLayer.cpp, is created.
+  Once successfully compiled, an executable file, cuSTNLFFM, is created.
   
 Usage 
 ========
